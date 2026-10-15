@@ -1,0 +1,45 @@
+.card {
+  background: #fff;
+  border: 1px solid #e1e4e8;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12);
+  padding: 16px;
+  margin: 12px auto;
+  max-width: 600px;
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 8px;
+}
+
+.user {
+  font-size: 1.05rem;
+}
+
+.date {
+  color: #6a737d;
+  font-size: 0.85rem;
+}
+
+.content {
+  margin: 0 0 8px;
+  line-height: 1.5;
+}
+
+.spaced {
+  margin-left: 6px;
+}
+
+.toggle {
+  color: #0366d6;
+  cursor: pointer;
+  font-size: 0.9rem;
+  text-decoration: none;
+}
+
+.toggle:hover {
+  text-decoration: underline;
+}

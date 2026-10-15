@@ -1,0 +1,18 @@
+<article class="card">
+  <header class="card-header">
+    <strong class="user">{{ post.user }}</strong>
+    <span class="date">{{ post.published | date: "MM/dd/yyyy" }}</span>
+  </header>
+
+  <p class="content">
+    {{ displayedContent
+    }}<a
+      *ngIf="isLong"
+      href="#"
+      class="toggle"
+      [class.spaced]="expanded"
+      (click)="toggle($event)"
+      >{{ expanded ? "read less" : "...read more" }}</a
+    >
+  </p>
+</article>
