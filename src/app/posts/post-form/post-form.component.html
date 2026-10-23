@@ -1,0 +1,18 @@
+<form [formGroup]="form" (ngSubmit)="save()" class="post-form">
+  <mat-form-field appearance="outline">
+    <mat-label>User</mat-label>
+    <input matInput formControlName="user" />
+    <mat-error>User is required</mat-error>
+  </mat-form-field>
+
+  <mat-form-field appearance="outline">
+    <mat-label>Content</mat-label>
+    <textarea matInput formControlName="content" rows="4"></textarea>
+    <mat-error>Content is required</mat-error>
+  </mat-form-field>
+
+  <div class="actions">
+    <a mat-button routerLink="/posts/list">Cancel</a>
+    <button mat-flat-button color="primary" type="submit">Save</button>
+  </div>
+</form>

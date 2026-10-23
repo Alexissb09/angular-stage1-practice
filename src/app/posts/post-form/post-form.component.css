@@ -1,0 +1,12 @@
+.post-form {
+  display: flex;
+  flex-direction: column;
+  max-width: 600px;
+  margin: 24px auto;
+}
+
+.actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+}

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Post } from '../post.model';
 import { PostsService } from '../posts.service';
 
@@ -7,8 +7,12 @@ import { PostsService } from '../posts.service';
   templateUrl: './post-list.component.html',
   styleUrl: './post-list.component.css',
 })
-export class PostListComponent {
+export class PostListComponent implements OnInit {
+  posts$ = this.postsService.posts$;
+
   constructor(private postsService: PostsService) {}
 
-  posts$ = this.postsService.getAllPosts();
+  ngOnInit(): void {
+    this.postsService.loadPosts();
+  }
 }
